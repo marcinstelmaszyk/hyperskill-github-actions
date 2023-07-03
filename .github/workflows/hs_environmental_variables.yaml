@@ -11,4 +11,6 @@ jobs:
       - name: step1
         env:
           platform: the platform
-        run: echo "Welcome to the ${{env.TOPIC}} topic from $section section at $platform" 
+        run: | 
+          echo "Github actor: $GITHUB_ACTOR $GITHUB_REPOSITORY $GITHUB_REF" 
+    
