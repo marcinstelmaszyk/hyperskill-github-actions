@@ -1,0 +1,14 @@
+name: environmental_variable_tutorial
+on: [push]
+env: 
+  TOPIC: Envs and secrets
+jobs:
+  job1:
+    env: 
+      section: Dev tools
+    runs-on: ubuntu-latest
+    steps:
+      - name: step1
+        env:
+          platform: the platform
+        run: echo "Welcome to the ${{env.TOPIC}} topic from $section section at $platform" 
